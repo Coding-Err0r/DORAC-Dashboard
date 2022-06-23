@@ -1,6 +1,5 @@
 import '../../styles/globals.css'
 import '@rainbow-me/rainbowkit/styles.css'
-import Layout from '../../components/layout/layout'
 import {
   apiProvider,
   configureChains,
@@ -34,10 +33,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiProvider client={wagmiClient}>
       <RainbowKitProvider coolMode chains={chains}>
-        <Layout>
           <Toaster position="bottom-left" />
           <Component {...pageProps} />
-        </Layout>
       </RainbowKitProvider>
     </WagmiProvider>
   )
